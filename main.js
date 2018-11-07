@@ -7,16 +7,20 @@ let size = 100;
 
 squere.style.width = size + 'px';
 squere.style.height = size + 'px';
+
+function element() {
+    squere.style.width = size + 100 + 'px';
+    squere.style.height = size + 100 + 'px';
+}
+
 window.addEventListener('scroll', function () {
     if (grow == true) {
         size += 5;
-        squere.style.width = size + 100 + 'px';
-        squere.style.height = size + 100 + 'px';
+        element()
     }
     else {
         size -= 5;
-        squere.style.width = size + 100 + 'px';
-        squere.style.height = size + 100 + 'px';
+        element()
     }
 
     if (size >= window.innerWidth * 0.5) {
@@ -33,6 +37,4 @@ window.addEventListener('scroll', function () {
     // else if (size <= 0) {
     //     grow = true;
     // }
-
-
 });
